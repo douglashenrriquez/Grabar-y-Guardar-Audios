@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAudioPluginRecordingSample.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Label Text="Nombre del audio" TextColor="Black" FontSize="20" HorizontalOptions="Center"></Label>
+
+            <Entry
+                x:Name="FileNameEntry"
+                FontSize="20"
+                HorizontalOptions="Center"
+                WidthRequest="300" />
+
+            <Label></Label>
+
+            <Label Text="Descripcion" TextColor="Black" FontSize="20" HorizontalOptions="Center"></Label>
+           
+            <Entry
+                x:Name="DescriptionEntry"
+                HorizontalOptions="Center"
+                WidthRequest="300" />
+
+            <Button
+                x:Name="StartRecordingButton"
+                Text="Grabar Audio"
+                FontSize="18"
+                BackgroundColor="Blue"
+                Clicked="OnStartRecordingClicked"
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="StopRecordingButton"
+                Text="Parar Audio"
+                FontSize="18"
+                BackgroundColor="Blue"
+                IsVisible="False"
+                Clicked="OnStopRecordingClicked"
+                HorizontalOptions="Center" />
+
+            <Button
+                Text="Lista de Audios"
+                Clicked="OnViewAudioListClicked"
+                FontSize="18"
+                Background="Green"
+                HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
